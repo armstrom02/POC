@@ -7,8 +7,8 @@ module.exports = function(app) {
     .get(call.get_all)
     .post(call.create_user);
 
-  app.route('/user/:name/:password')
-    .get(call.get_user)
+  app.route('/user/login')
+    .post(call.get_user)
     .put(call.update_user)
     .delete(call.delete_user);
 

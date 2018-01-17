@@ -32,8 +32,9 @@ exports.create_user = function (req, res) {
 
 
 exports.get_user = (req, res) => {
-  var name = req.params.name;
-  var password = req.params.password;
+  
+  var name = req.body.name;
+  var password = req.body.password;
   console.log(password + " check pass" + name);
   Task.findOne({ name: name }).exec().then(user => {
 
